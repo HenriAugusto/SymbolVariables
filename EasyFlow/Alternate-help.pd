@@ -1,0 +1,33 @@
+#N canvas 543 92 662 300 10;
+#X obj 64 190 alternate;
+#X floatatom 64 215 5 0 0 0 - - -;
+#X floatatom 115 216 5 0 0 0 - - -;
+#X floatatom 64 159 5 0 0 0 - - -;
+#X obj 184 190 alternate;
+#X msg 184 158 bang;
+#X obj 235 217 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 184 217 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 404 130 alternate;
+#X symbolatom 404 181 10 0 0 0 - - -;
+#X symbolatom 455 157 10 0 0 0 - - -;
+#X msg 404 34 symbol cat;
+#X msg 414 56 symbol dog;
+#X msg 423 79 symbol weasel;
+#X msg 429 102 symbol lion;
+#X text 40 40 Alternate passes what it receives one time to it's left
+inlet \, then to it's right inlet \, then to it's left inlet... It
+works with "anything".;
+#X connect 0 0 1 0;
+#X connect 0 1 2 0;
+#X connect 3 0 0 0;
+#X connect 4 0 7 0;
+#X connect 4 1 6 0;
+#X connect 5 0 4 0;
+#X connect 8 0 9 0;
+#X connect 8 1 10 0;
+#X connect 11 0 8 0;
+#X connect 12 0 8 0;
+#X connect 13 0 8 0;
+#X connect 14 0 8 0;

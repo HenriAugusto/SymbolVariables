@@ -1,0 +1,27 @@
+#N canvas 52 55 582 392 10;
+#X obj 49 18 inlet hotinlet list;
+#X floatatom 106 72 5 0 0 0 - - -, f 5;
+#X obj 106 91 - 1;
+#X obj 49 130 list split;
+#X obj 384 162 inlet right substitute;
+#X obj 106 49 inlet middle index;
+#X obj 77 156 list split 1;
+#X obj 49 265 list append;
+#X obj 49 287 outlet;
+#X text 205 260 This is part of EasyFlow library of abstractions.;
+#X text 205 290 Created by Henri Augusto - v1.0 - 11 July 2015;
+#X text 205 309 henriaugusto.github.io;
+#X text 190 88 This is a simple abstraction that substitutes the n-th
+element of a list. Middle inlet takes the index. Right inlet takes
+what will go in it's place.;
+#X obj 111 188 list prepend you_must_first_set_the_substitute;
+#X connect 0 0 3 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 1;
+#X connect 3 0 7 0;
+#X connect 3 1 6 0;
+#X connect 4 0 13 1;
+#X connect 5 0 1 0;
+#X connect 6 1 13 0;
+#X connect 7 0 8 0;
+#X connect 13 0 7 1;

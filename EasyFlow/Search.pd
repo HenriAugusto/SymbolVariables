@@ -1,0 +1,118 @@
+#N canvas 177 8 522 649 10;
+#X obj 141 289 ListPick;
+#X obj 39 143 list length;
+#X floatatom 39 165 5 0 0 0 - - -, f 5;
+#X obj 39 208 for;
+#X floatatom 54 232 5 0 0 0 - - -, f 5;
+#X obj 254 293 inlet coldinlet symbol to search;
+#X obj 39 19 inlet hotinlet list;
+#X obj 54 251 t f f;
+#X obj 94 252 cnv 10 10 17 empty empty empty 20 12 0 14 -99096 -66577
+0;
+#X obj 169 409 cnv 10 10 17 empty empty empty 20 12 0 14 -99096 -66577
+0;
+#X msg 179 459 5 17 20 22 23 24 25;
+#X msg 179 433 add2 \$1;
+#X symbolatom 254 315 10 0 0 0 - - -, f 10;
+#X symbolatom 141 311 10 0 0 0 - - -, f 10;
+#X obj 179 336 select symbol;
+#X obj 89 42 cnv 10 10 17 empty empty empty 20 12 0 14 -88065 -66577
+0;
+#X obj 99 42 s \$0-Initialization;
+#X obj 276 410 cnv 10 10 17 empty empty empty 20 12 0 14 -88065 -66577
+0;
+#X obj 286 410 r \$0-Initialization;
+#X msg 286 432 set;
+#X obj 39 71 trigger anything anything;
+#X obj 39 43 t a b;
+#X obj 39 93 t b a;
+#X obj 29 116 cnv 10 10 17 empty empty empty 20 12 0 14 -147521 -66577
+0;
+#X obj 39 116 s \$0-Output;
+#X obj 82 434 cnv 10 10 17 empty empty empty 20 12 0 14 -147521 -66577
+0;
+#X obj 92 434 r \$0-Output;
+#X obj 179 481 outlet;
+#X text 208 136 This is part of EasyFlow library of abstractions.;
+#X text 208 166 Created by Henri Augusto - v1.0 - 11 July 2015;
+#X text 208 185 henriaugusto.github.io;
+#X obj 104 252 v \$0-index;
+#X obj 179 409 v \$0-index;
+#X obj 196 365 cnv 10 10 17 empty empty empty 20 12 0 14 -2269 -66577
+0;
+#X obj 206 365 v \$0-counter;
+#X obj 82 545 cnv 10 10 17 empty empty empty 20 12 0 14 -2269 -66577
+0;
+#X obj 92 545 v \$0-counter;
+#X obj 89 210 cnv 10 10 17 empty empty empty 20 12 0 14 -51135 -66577
+0;
+#X obj 39 184 t f f;
+#X obj 92 456 t b a;
+#X obj 127 503 cnv 10 10 17 empty empty empty 20 12 0 14 -51135 -66577
+0;
+#X obj 99 210 s \$0-Length;
+#X obj 137 503 r \$0-Length;
+#X obj 92 503 ==;
+#X obj 82 479 cnv 10 10 17 empty empty empty 20 12 0 14 -99096 -66577
+0;
+#X obj 92 479 v \$0-index;
+#X obj 92 525 sel 1;
+#X obj 92 567 == 0;
+#X msg 247 410 0;
+#X obj 92 589 sel 1;
+#X obj 344 474 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 346 509 metro 200;
+#X obj 332 555 cnv 10 10 17 empty empty empty 20 12 0 14 -2269 -66577
+0;
+#X obj 342 555 v \$0-counter;
+#X floatatom 342 577 5 0 0 0 - - -, f 5;
+#X obj 291 365 + 1;
+#X obj 92 611 f -1;
+#X text 226 12 This abstraction searches a list for a specific;
+#X text 225 28 value and outputs the found indexes.;
+#X text 229 68 If it doesn't found \, outputs -1;
+#X connect 0 0 13 0;
+#X connect 1 0 2 0;
+#X connect 2 0 38 0;
+#X connect 3 1 4 0;
+#X connect 4 0 7 0;
+#X connect 5 0 12 0;
+#X connect 6 0 21 0;
+#X connect 7 0 0 0;
+#X connect 7 1 31 0;
+#X connect 10 0 27 0;
+#X connect 11 0 10 0;
+#X connect 12 0 14 1;
+#X connect 13 0 14 0;
+#X connect 14 0 34 0;
+#X connect 14 0 32 0;
+#X connect 18 0 19 0;
+#X connect 18 0 48 0;
+#X connect 19 0 10 0;
+#X connect 20 0 22 0;
+#X connect 20 1 0 1;
+#X connect 21 0 20 0;
+#X connect 21 1 16 0;
+#X connect 22 0 24 0;
+#X connect 22 1 1 0;
+#X connect 26 0 39 0;
+#X connect 32 0 11 0;
+#X connect 34 0 55 0;
+#X connect 36 0 47 0;
+#X connect 38 0 3 0;
+#X connect 38 1 41 0;
+#X connect 39 0 45 0;
+#X connect 39 1 10 0;
+#X connect 42 0 43 1;
+#X connect 43 0 46 0;
+#X connect 45 0 43 0;
+#X connect 46 0 36 0;
+#X connect 47 0 49 0;
+#X connect 48 0 34 0;
+#X connect 49 0 56 0;
+#X connect 50 0 51 0;
+#X connect 51 0 53 0;
+#X connect 53 0 54 0;
+#X connect 55 0 34 0;
+#X connect 56 0 27 0;

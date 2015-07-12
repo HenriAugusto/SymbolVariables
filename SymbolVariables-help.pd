@@ -1,0 +1,135 @@
+#N canvas 0 50 1366 686 10;
+#X declare -path EasyFlow;
+#X declare -path EasyFlow;
+#X declare -path Help;
+#X obj 43 440 s SV_SymbolVariables;
+#X text 42 386 Unknown Methods Return Erros in the Console;
+#X obj 40 50 getallvars-help;
+#X obj 40 26 getvar-setvar-help;
+#X obj 39 236 prepend-append-help;
+#X obj 40 73 getallpairs-help;
+#X obj 160 236 prependall-appendall-help;
+#X obj 129 326 frequency-help;
+#X obj 40 266 concatenate-help;
+#X obj 160 266 concatenateall-help;
+#X obj 38 171 copy-help;
+#X obj 160 26 delete-help;
+#X obj 39 97 clear-help;
+#X obj 38 145 varindex-help;
+#X obj 158 171 search-help;
+#X obj 39 121 set-help;
+#X obj 159 121 printall-help;
+#X obj 160 50 getallvalues-help;
+#X obj 39 326 compare-help;
+#X obj 159 145 getbyindex-help;
+#X obj 39 0 cnv 3 300 15 empty empty Getting 10 8 0 15 -2049 -262144
+0;
+#X obj 105 -4 cnv 3 1 1 empty empty and 3 12 0 15 -233017 -262144 0
+;
+#X obj 137 -4 cnv 3 1 1 empty empty seting 3 12 0 15 -233017 -262144
+0;
+#X obj 187 -4 cnv 3 1 1 empty empty variables 3 12 0 15 -233017 -262144
+0;
+#X obj 257 -4 cnv 3 1 1 empty empty content 3 12 0 15 -233017 -262144
+0;
+#X obj 19 -30 cnv 3 300 15 empty empty Methods 10 8 0 15 -1 -262144
+0;
+#X obj 95 -34 cnv 3 1 1 empty empty Available 3 12 0 15 -233017 -262144
+0;
+#X obj 39 209 cnv 3 300 15 empty empty Changing 10 8 0 15 -25780 -262144
+0;
+#X obj 122 205 cnv 3 1 1 empty empty variables 3 12 0 15 -233017 -262144
+0;
+#X obj 192 205 cnv 3 1 1 empty empty content 3 12 0 15 -233017 -262144
+0;
+#X obj 39 299 cnv 3 300 15 empty empty Analyzing 10 8 0 15 -65553 -262144
+0;
+#X obj 122 295 cnv 3 1 1 empty empty variables 3 12 0 15 -233017 -262144
+0;
+#X obj 27 4 cnv 5 5 5 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 24 215 cnv 5 5 5 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 25 304 cnv 5 5 5 empty empty empty 20 12 0 14 -1 -66577 0;
+#X obj 39 359 cnv 3 300 15 empty empty Notes 10 8 0 15 -218753 -262144
+0;
+#X obj 25 364 cnv 5 5 5 empty empty empty 20 12 0 14 -1 -66577 0;
+#X msg 43 412 test var1 PowerArmor;
+#X msg 183 412 become BoS Initiate;
+#X text 39 477 Those help files are better vizualised on pd-extended.
+;
+#X obj 393 -32 cnv 15 500 540 empty empty HELP 5 15 0 25 -131089 -262144
+0;
+#X obj 398 13 cnv 15 490 490 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 617 74 SymbolVariables;
+#X text 410 65 This is the SymbolVariables;
+#X text 412 83 Abstraction.;
+#X text 583 73 -->;
+#X text 39 503 On Windows \, use alt+space -> x if the subpatch;
+#X text 39 520 doesn't open in the right place.;
+#X text 484 136 Every method works by sending a message to SV_SymbolVariables.
+;
+#X obj 617 26 r SV_;
+#X text 485 181 This name was chosen because it is very unlikely that
+anybody will ever want to use that sendname. You can set your own shortcut
+simply by adding the respective receive before the abstraction. In
+this patch we've used SV_;
+#X text 482 232 (See above);
+#X text 483 259 Example;
+#X msg 551 292 setvar Place Vault11;
+#X obj 551 314 s SV_;
+#X text 438 348 You can press Ctrl+M (or file-> mesasge) and simply
+type the method you want. Example: press ctrl+m and type;
+#X obj 578 431 r sendname1;
+#X symbolatom 578 453 10 0 0 0 - - -, f 10;
+#X text 533 395 SV_ getvar Place sendname1;
+#X obj 914 -31 cnv 15 365 540 empty empty INFO 5 15 0 25 -1153 -262144
+0;
+#X obj 919 14 cnv 15 355 490 empty empty empty 20 12 0 14 -262144 -66577
+0;
+#X obj 941 444 declare -path EasyFlow;
+#X obj 941 464 declare -path Help;
+#X text 929 22 This is the vanilla version.;
+#X text 1029 188 doesn't natively supports that.;
+#X text 929 148 You should really check EasyFlow!;
+#X text 928 175 Since this is vanilla only it can't work with substrings
+\, since pd vanilla;
+#X text 929 213 An extended version wich will include externals is
+;
+#X text 929 224 planned.;
+#X text 928 272 The sends were colored with Color PD.;
+#X text 931 50 It uses only vanilla objects \, to minimize dependencies.
+;
+#X text 930 84 In only uses abstractions from the EasyFlow library.
+;
+#X text 930 97 But those will included as subpatches on SymbolVariables
+;
+#X text 931 108 on future versions to avoid that.;
+#X text 929 300 You can find EasyFlow and Color PD on;
+#X text 936 419 This is the patch to the Help files and EasyFlow;
+#X text 959 324 henriaugusto.github.io;
+#X obj 879 540 cnv 3 400 15 empty empty Created 10 8 0 15 -1 -262144
+0;
+#X obj 951 536 cnv 3 1 1 empty empty by 3 12 0 15 -233017 -262144 0
+;
+#X obj 975 536 cnv 3 1 1 empty empty Henri 3 12 0 15 -233017 -262144
+0;
+#X obj 1021 536 cnv 3 1 1 empty empty Augusto 3 12 0 15 -233017 -262144
+0;
+#X obj 1087 536 cnv 3 1 1 empty empty - 3 12 0 15 -233017 -262144 0
+;
+#X obj 1107 536 cnv 3 1 1 empty empty v0.8 3 12 0 15 -233017 -262144
+0;
+#X obj 1145 536 cnv 3 1 1 empty empty 11th 3 12 0 15 -233017 -262144
+0;
+#X obj 1183 536 cnv 3 1 1 empty empty July 3 12 0 15 -233017 -262144
+0;
+#X obj 1216 536 cnv 3 1 1 empty empty 2015 3 12 0 15 -233017 -262144
+0;
+#X text 933 350 You can also find me on;
+#X text 934 367 Soundcloud;
+#X text 934 383 Facebook;
+#X connect 37 0 0 0;
+#X connect 38 0 0 0;
+#X connect 49 0 42 0;
+#X connect 53 0 54 0;
+#X connect 56 0 57 0;

@@ -1,0 +1,20 @@
+#N canvas 291 55 701 272 10;
+#X obj 68 39 inlet leftmost - next number;
+#X obj 107 89 inlet rightmost - set counter;
+#X obj 95 234 outlet;
+#X obj 68 123 float 1;
+#X floatatom 95 209 5 0 0 0 - - -, f 5;
+#X obj 68 175 t f f;
+#X obj 128 122 + 1;
+#X text 319 144 This is part of EasyFlow library of abstractions.;
+#X text 319 174 Created by Henri Augusto - v1.0 - 11 July 2015;
+#X text 319 193 henriaugusto.github.io;
+#X text 316 36 This is a basic counter. Bang to it's hot inlet raises
+the counter. Numbers to the cold inlet set it's value.;
+#X connect 0 0 3 0;
+#X connect 1 0 3 1;
+#X connect 3 0 5 0;
+#X connect 4 0 2 0;
+#X connect 5 0 6 0;
+#X connect 5 1 4 0;
+#X connect 6 0 3 1;
